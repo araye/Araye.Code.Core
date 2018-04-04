@@ -6,3 +6,6 @@ for .NET version of this library you can look at [this repo](https://github.com/
 
 [![NuGet](https://img.shields.io/nuget/v/Araye.Code.Core.svg)](https://www.nuget.org/packages/Araye.Code.Core/)
 [![AppVeyor](https://img.shields.io/appveyor/ci/gruntjs/grunt.svg)](https://ci.appveyor.com/project/Araye/araye-code-core)
+
+[![Build history](https://buildstats.info/appveyor/chart/Araye/araye-code-core)](https://ci.appveyor.com/project/Araye/araye-code-core/history)
+
