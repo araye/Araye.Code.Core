@@ -2,7 +2,7 @@
 
 namespace Araye.Code.Core.Models
 {
-    public class BaseEntity
+    public abstract class BaseEntity : EntityBaseWithTypedId<long>
     {
         public DateTime? DateCreated { get; set; }
         public string UserCreated { get; set; }
