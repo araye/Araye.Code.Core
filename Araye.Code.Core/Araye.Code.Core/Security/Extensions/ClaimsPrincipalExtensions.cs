@@ -12,5 +12,12 @@ namespace Araye.Code.Core.Security.Extensions
 
             return principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         }
+
+        public static string GetNameFamily(this ClaimsPrincipal identity, string firstNameType="FirstName" , string lastNameType="LastName")
+        {
+            var nameClaim = identity.FindFirst(firstNameType);
+            var familyClaim = identity.FindFirst(lastNameType);
+            return (!string.IsNullOrEmpty(nameClaim.Value) && !string.IsNullOrEmpty(nameClaim.Value)) ? $"{nameClaim.Value} {familyClaim.Value}" : identity.Identity.Name;
+        }
     }
 }
