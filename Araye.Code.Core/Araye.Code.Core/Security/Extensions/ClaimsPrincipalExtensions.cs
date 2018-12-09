@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Araye.Code.Core.Extensions;
+using System;
 using System.Security.Claims;
 
 namespace Araye.Code.Core.Security.Extensions
@@ -17,7 +18,7 @@ namespace Araye.Code.Core.Security.Extensions
         {
             var nameClaim = identity.FindFirst(firstNameType);
             var familyClaim = identity.FindFirst(lastNameType);
-            return (!string.IsNullOrEmpty(nameClaim.Value) && !string.IsNullOrEmpty(nameClaim.Value)) ? $"{nameClaim.Value} {familyClaim.Value}" : identity.Identity.Name;
+            return (!string.IsNullOrEmpty(nameClaim?.Value.ToStringSafe()) && !string.IsNullOrEmpty(nameClaim?.Value.ToStringSafe())) ? $"{nameClaim.Value} {familyClaim.Value}" : identity.Identity.Name;
         }
     }
 }
