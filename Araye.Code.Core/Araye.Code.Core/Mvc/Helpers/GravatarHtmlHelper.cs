@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
-namespace Araye.Code.Mvc.Helpers
+namespace Araye.Code.Core.Mvc.Helpers
 {
     public static class GravatarHtmlHelper
     {
@@ -111,7 +111,7 @@ namespace Araye.Code.Mvc.Helpers
             if (!string.IsNullOrEmpty(Email))
             {
                 // build up image url, including MD5 hash for supplied email:
-                
+
 
                 var encoder = new UTF8Encoding();
                 var md5Hasher = new MD5CryptoServiceProvider();
