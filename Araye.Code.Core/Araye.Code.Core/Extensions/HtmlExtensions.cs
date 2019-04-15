@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Web;
 
 namespace Araye.Code.Core.Extensions
 {
@@ -298,7 +297,7 @@ namespace Araye.Code.Core.Extensions
                 try
                 {
                     var href = m.Groups[1].Value;
-                    if (href.StartsWith("/") || (!string.IsNullOrEmpty(replaceValue) && href.StartsWith(replaceValue)) )
+                    if (href.StartsWith("/") || (!string.IsNullOrEmpty(replaceValue) && href.StartsWith(replaceValue)))
                     {
                         href = String.Format("{0}://{1}{2}", context.Request.Scheme, context.Request.Host.Value, href);
                     }

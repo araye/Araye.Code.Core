@@ -1,5 +1,4 @@
-﻿using Araye.Code.Core.Persian;
-using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Araye.Code.Core.Persian
 {
