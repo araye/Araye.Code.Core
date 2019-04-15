@@ -19,6 +19,9 @@ namespace Araye.Code.Core.Security
             if (context.User != null && context.User.IsInRole(Consts.WebAdminRoleName))
                 return;
 
+            if (context.User != null && context.User.Claims.Where(x => x.Type == ClaimTypes.Role && x.Value == Consts.WebAdminRoleName).Any())
+                return;
+
             var atts = filterContext.ActionDescriptor.EndpointMetadata.Where(ac => ac.GetType() == typeof(ArayeActionPermissionAttribute)).Select(a => (ArayeActionPermissionAttribute)a);
             var permission = false;
             foreach (var att in atts)
