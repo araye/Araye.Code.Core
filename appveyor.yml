@@ -9,5 +9,5 @@ build:
 deploy:
 - provider: NuGet
   api_key:
-    secure: jnBDNKl0apoNy8IbR9wSRP9lIN7Vv59nRd23DnHlPgrgcV+a9MCunSduVorCTSGC
+    secure: AsYP0IzROChbHum3fvSyS32pEFBHyjtDTEh61XbP9VidCX7XpFGDhlkhPirxDft2
   skip_symbols: false
