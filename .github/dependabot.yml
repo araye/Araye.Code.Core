@@ -1,0 +1,16 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/Araye.Code.Core"
+  schedule:
+    interval: daily
+    time: "01:30"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: System.Drawing.Common
+    versions:
+    - 5.0.0
+    - 5.0.1
+  - dependency-name: System.ServiceModel.Primitives
+    versions:
+    - 4.8.0
